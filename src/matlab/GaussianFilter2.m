@@ -30,7 +30,7 @@ end
 
 MaxSigma = max(sigmax, sigmay);
 sizex = CalculateGaussianWidth(MaxSigma);
-sizey = CalculateGaussianWidth(MaxSigma);
+sizey = sizex;
 
 if nargin < 3 || isempty(meanx)
   meanx = 0;
