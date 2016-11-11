@@ -19,6 +19,7 @@ if nargin < 3
 end
 
 width = CalculateGaussianWidth(sigma);
+width = floor(width / 2);
 
 [xs, ys] = meshgrid(-width:width, -width:width);
 x1 = xs .* cos(theta) + ys .* sin(theta);
