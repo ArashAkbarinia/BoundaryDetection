@@ -17,8 +17,6 @@
 
 #include "gaussian.h"
 
-#include <iostream>
-
 cv::Mat GaussianFilter2 ( double sigma )
 {
   return GaussianFilter2 ( sigma, sigma );
@@ -47,8 +45,8 @@ cv::Mat GaussianFilter2 ( double sigmax, double sigmay, double meanx, double mea
     {
       for ( int j = 0; j < kernel.cols; j++ )
         {
-          float x = i - centrex;
-          float y = j - centrey;
+          float x = i - centrex + 1;
+          float y = j - centrey + 1;
           kernel.at<float> ( i, j ) = exp ( - ( a * pow ( x, 2 ) + 2 * b * x * y + c * pow ( y, 2 ) ) );
         }
     }
@@ -67,8 +65,8 @@ cv::Mat Gaussian2Gradient1 ( double sigma, double theta, double seta )
     {
       for ( int j = 0; j < kernel.cols; j++ )
         {
-          float x1 = i - width;
-          float y1 = j - width;
+          float x1 = j - width;
+          float y1 = i - width;
           float x = x1 * cos ( theta ) + y1 * sin ( theta );
           float y = -x1 * sin ( theta ) + y1 * cos ( theta );
           kernel.at<float> ( i, j ) = -x * exp ( - ( x * x + y * y * seta * seta ) / ( 2 * SigmaSqr ) ) / ( CV_PI * SigmaSqr );
