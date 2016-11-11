@@ -52,7 +52,7 @@ cv::Mat GaussianFilter2 ( double sigmax, double sigmay, double meanx, double mea
           kernel.at<float> ( i, j ) = exp ( - ( a * pow ( x, 2 ) + 2 * b * x * y + c * pow ( y, 2 ) ) );
         }
     }
-  return kernel;
+  return kernel / cv::sum ( kernel ) [0];
 }
 
 cv::Mat Gaussian2Gradient1 ( double sigma, double theta, double seta )
