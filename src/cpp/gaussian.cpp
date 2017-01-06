@@ -13,6 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
+ * This is the supplementary material of our article presented at the
+ * IJCV'17 "Feedback and Surround Modulated Boundary Detection
  */
 
 #include "gaussian.h"

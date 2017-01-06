@@ -18,8 +18,8 @@
  */
 
 /* inclusion guard */
-#ifndef __GAUSSIAN_H__
-#define __GAUSSIAN_H__
+#ifndef __UTILS_H__
+#define __UTILS_H__
 
 #include <opencv2/core/core.hpp>
 
@@ -27,11 +27,12 @@
  * Method definitions.
  */
 
-cv::Mat GaussianFilter2 ( double sigma );
-cv::Mat GaussianFilter2 ( double sigmax, double sigmay, double meanx = 0, double meany = 0, double theta = 0 );
+cv::Mat CentreCircularZero ( cv::Mat SurroundMat, double CentreRadius );
 
-cv::Mat Gaussian2Gradient1 ( double sigma, double theta, double seta );
+cv::Mat CircularAverage ( double radius );
 
-int CalculateGaussianWidth ( double sigma, int MaxWidth = 100 );
+cv::Mat CircularLocalStdContrast ( cv::Mat InputImage, double SurroundRadius = 2.5 );
 
-#endif /* __GAUSSIAN_H__ */
+cv::Mat NonMaximumSuppression ( cv::Mat InputImage, cv::Mat thetas, double radius = 2.5 );
+
+#endif /* __UTILS_H__ */
