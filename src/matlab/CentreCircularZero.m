@@ -9,7 +9,7 @@ function SurroundMat = CentreCircularZero(SurroundMat, CentreRadius)
 %   SurroundMat  the centred set to 0 matrix.
 %
 % This is the supplementary material of our article presented at the
-% BMVC'16 "Boundary Detection Through Surround Modulation".
+% IJCV'17 "Feedback and Surround Modulated Boundary Detection".
 %
 
 [ws, hs] = size(SurroundMat);

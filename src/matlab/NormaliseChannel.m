@@ -15,7 +15,7 @@ function noarmalisedx = NormaliseChannel(x, a, b, mins, maxs)
 %   noarmalisedx the output matrix between 'a' and 'b'.
 %
 % This is the supplementary material of our article presented at the
-% BMVC'16 "Boundary Detection Through Surround Modulation".
+% IJCV'17 "Feedback and Surround Modulated Boundary Detection".
 %
 
 if nargin < 2

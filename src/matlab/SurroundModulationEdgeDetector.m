@@ -8,7 +8,7 @@ function EdgeImageResponse = SurroundModulationEdgeDetector(InputImage)
 %   EdgeImageResponse  the edges of input image.
 %
 % This is the supplementary material of our article presented at the
-% BMVC'16 "Boundary Detection Through Surround Modulation".
+% IJCV'17 "Feedback and Surround Modulated Boundary Detection".
 %
 
 % input image is from retina

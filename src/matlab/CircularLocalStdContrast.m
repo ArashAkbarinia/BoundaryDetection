@@ -10,7 +10,7 @@ function ImageContrast = CircularLocalStdContrast(InputImage, SurroundRadius, Ce
 %   ImageContrast  calculated local std of each channel.
 %
 % This is the supplementary material of our article presented at the
-% BMVC'16 "Boundary Detection Through Surround Modulation".
+% IJCV'17 "Feedback and Surround Modulated Boundary Detection".
 %
 
 InputImage = double(InputImage);

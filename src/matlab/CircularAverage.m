@@ -8,7 +8,7 @@ function ch = CircularAverage(radius)
 %   ch  the circle average filter
 %
 % This is the supplementary material of our article presented at the
-% BMVC'16 "Boundary Detection Through Surround Modulation".
+% IJCV'17 "Feedback and Surround Modulated Boundary Detection".
 %
 
 x = radius * 2;
