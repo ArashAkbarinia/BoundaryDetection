@@ -216,12 +216,12 @@ std::vector<std::vector<cv::Mat> > DoV1 ( cv::Mat OpponentImage, double LgnSigma
           for ( int t = 0; t < nangles; t++ )
             {
               cv::Mat cltim;
-              cv::filter2D ( cim, cltim, cim.depth(), d1gs[t] );
+              cv::filter2D ( clim, cltim, clim.depth(), d1gs[t] );
               cltim = cv::abs ( cltim );
 
               angles[t] = cltim;
             }
-          SurroundModulation ( cim, angles, d1gs[0].rows, v1sigma );
+          SurroundModulation ( clim, angles, d1gs[0].rows, v1sigma );
           // resizing them back to the original size
           for ( int t = 0; t < nangles; t++ )
             {
